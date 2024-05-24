@@ -27,11 +27,11 @@ def dna_strand(dna):
 
 ## Test case 1
 dna = "ATTGC"
-print(dna_strand(dna))
+print(dna_strand(dna))      # "TAACG"
 
 ## Test case 2
 dna = "GTAT"
-print(dna_strand(dna))
+print(dna_strand(dna))      # "CATA"
 ```
 
 
@@ -60,11 +60,11 @@ def friend(x):
 
 ## Test case 1
 arr = ["Ryan", "Kieran", "Jason", "Yous"]
-print(friend(arr))
+print(friend(arr))      # ["Ryan", "Yous"]
 
 ## Test case 2
 arr = ["Ryan", "Kieran", "Mark"]
-print(friend(arr))
+print(friend(arr))      # ["Ryan", "Mark"]
 ```
 
 
@@ -115,11 +115,10 @@ def find_short(s):
         len_str = len(word)
         if l > len_str:
             l = len_str
-    return l # l: shortest word length
+    return l
 
 
 ## Test case
 s = "bitcoin take over the world maybe who knows perhaps"
-print(find_short(s))
-
+print(find_short(s))  # answer: 3 (from word "who")
 ```

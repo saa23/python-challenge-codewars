@@ -19,10 +19,10 @@ def find_smallest_int(arr):
 
 ## Test case 1
 arr = [34, 15, 88, 2]
-print(find_smallest_int(arr))
+print(find_smallest_int(arr))       # 2
 
 ## Test case 2
 arr = [34, -345, -1, 100]
-print(find_smallest_int(arr))
+print(find_smallest_int(arr))       # -345
 ```
 

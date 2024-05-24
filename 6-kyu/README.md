@@ -29,9 +29,9 @@ def find_outlier(arr):
 
 ## Test case 1
 arr = [2, 4, 0, 100, 4, 11, 2602, 36]
-print(find_outlier(arr))
+print(find_outlier(arr))        # 11 (odd number)
 
 ## Test case 2
 arr = [160, 3, 1719, 19, 11, 13, -21]
-print(find_outlier(arr))
+print(find_outlier(arr))        # 160 (even number)
 ```
