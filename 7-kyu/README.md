@@ -155,3 +155,34 @@ print(sum_two_smallest_numbers(arr))        ## 7
 arr = [10, 343445353, 3453445, 3453545353453]
 print(sum_two_smallest_numbers(arr))        ## 3453455
 ```
+
+
+### 6. Exes and Ohs
+Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+**Examples**
+```bash
+XO("ooxx") => true
+XO("xooxx") => false
+XO("ooxXm") => true
+XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+XO("zzoo") => false
+```
+
+**Solution**
+```bash
+def xo(s:str):
+    s_lower = s.lower()
+    x_count = s_lower.count("x")
+    o_count = s_lower.count("o")
+
+    if x_count == o_count: return True
+    else: return False
+
+
+print(xo('ooxx'))       ## true
+print(xo('xooxx'))      ## falsle
+print(xo('ooxXm'))      ## true
+print(xo('zpzpzpp'))    ## true
+print(xo('zzoo'))       ## false
+```
