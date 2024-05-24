@@ -122,3 +122,36 @@ def find_short(s):
 s = "bitcoin take over the world maybe who knows perhaps"
 print(find_short(s))  # answer: 3 (from word "who")
 ```
+
+
+### 5. Sum of two lowest positive integers
+
+Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+
+**Examples**
+``` bash
+[19, 5, 42, 2, 77] --> 7
+
+[10, 343445353, 3453445, 3453545353453] --> 3453455
+```
+
+**Solution**
+``` bash
+def sum_two_smallest_numbers(numbers):
+    numbers.sort()
+    return sum(numbers[:2])
+
+
+# Test case 1
+arr = [19, 5, 42, 2, 77]
+print(sum_two_smallest_numbers(arr))        ## 7
+
+# Test case 2
+arr = [10, 343445353, 3453445, 3453545353453]
+print(sum_two_smallest_numbers(arr))        ## 3453455
+```
