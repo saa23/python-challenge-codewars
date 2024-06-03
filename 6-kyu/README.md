@@ -197,3 +197,30 @@ def solution(s):
         pairs[-1] += '_'
     return pairs
 ```
+
+
+### 7. is a number prime?
+Define a function that takes an integer argument and returns a logical value true or false depending on if the integer is a prime.
+
+Per Wikipedia, a prime number ( or a prime ) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+
+**Examples**
+```bash
+is_prime(1)  /* false */
+is_prime(2)  /* true  */
+is_prime(-1) /* false */
+```
+
+**Solution**
+```bash
+import math
+
+def is_prime(num):
+    if num < 2:
+        return False
+    
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0: ## check if num is divisible by other than 1 and itself
+            return False
+    return True
+```
