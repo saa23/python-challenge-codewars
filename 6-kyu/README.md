@@ -122,3 +122,58 @@ print(solution('CD'))           # 400
 ## Test case 3
 print(solution('XC'))           # 90
 ```
+
+### 4. Count characters in your string
+The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+What if the string is empty? Then the result should be empty object literal, {}.
+
+**Solution**
+Alternative 1
+```bash
+from collections import Counter
+
+def count(s: str):
+    res = Counter(s)
+    return dict(res)
+```
+
+
+Alternative 2
+```bash
+def count(s: str):
+    dict_res = {}
+
+    for char in s:
+        if char in dict_res:    ## if the char has been mapped
+            dict_res[char] += 1
+        else:                   ## if the char is mapped for the first time
+            dict_res[char] = 1
+    return dict_res
+```
+
+
+### 5. Are they the "same"?
+Given two arrays `a` and `b` write a function comp(a, b) (orcompSame(a, b)) that checks whether the two arrays have the "same" elements, with the same multiplicities (the multiplicity of a member is the number of times it appears). "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.
+
+**Examples**
+```bash
+a = [121, 144, 19, 161, 19, 144, 19, 11]  
+b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+The result of comp(a,b) is `True`
+
+
+a = [121, 144, 19, 161, 19, 144, 19, 11] 
+b = [11*11, 121*121, 144*144, 19*19, 161*161, 19*19, 144*144, 19*19]
+The result of comp(a,b) is `False`
+
+```
+
+**Solution**
+```bash
+def comp(array1, array2):
+    try:
+        return sorted([v**2 for v in array1]) == sorted(array2)
+    except:
+        return False
+```
